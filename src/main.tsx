@@ -1,19 +1,19 @@
-import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App.tsx";
-import "./index.module.css";
-import ErrorScreen from "./screens/ErrorScreen.tsx";
-import Integers from "./screens/Integers.tsx";
-import Dag from "./screens/Dag.tsx";
-import Sequence from "./screens/Sequence.tsx";
-import BinaryTree from "./screens/Binary.tsx";
-import Layout from "./assets/layout/Layout.tsx";
-import ContactUs from "./screens/ContactUs.tsx";
+import ReactDOM from 'react-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import App from './App.tsx';
+import './index.module.css';
+import ErrorScreen from './screens/ErrorScreen.tsx';
+import Integers from './screens/Integers.tsx';
+import Dag from './screens/Dag.tsx';
+import Sequence from './screens/Sequence.tsx';
+import BinaryTree from './screens/Binary.tsx';
+import Layout from './assets/layout/Layout.tsx';
+import ContactUs from './screens/ContactUs.tsx';
 
-const root = document.getElementById("root")!;
+const root = document.getElementById('root')!;
 const anyReactDOM: any = ReactDOM;
 anyReactDOM.createRoot(root).render(
-  <BrowserRouter>
+  <HashRouter>
     <Layout>
       <Routes>
         <Route path="/" element={<App />} />
@@ -25,5 +25,5 @@ anyReactDOM.createRoot(root).render(
         <Route path="*" element={<ErrorScreen />} />
       </Routes>
     </Layout>
-  </BrowserRouter>
+  </HashRouter>
 );
